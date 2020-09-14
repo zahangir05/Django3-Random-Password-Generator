@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Django 3 - Password Generator Home Page</title>
+</head>
+<body>
+<div class="container text-center">
+
+    <h1>Django 3 - Password Generator Home!!</h1>
+    <form action="{% url 'password' %}">
+        <label for="length">Select Password Length:</label>
+        <select name="length" id="len">
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option selected>8</option>
+            <option>9</option>
+            <option >10</option>
+            <option>11</option>
+            <option>12</option>
+        </select><br/>
+        <input type="checkbox" name="number"><label>Number</label><br/>
+        <input type="checkbox" name="upperCase"><label>Upper Case Char</label><br/>
+        <input type="checkbox" name="specialChar"><label>Special Char</label><br/>
+        <input type="submit" value="Generate Password" class="btn btn-success">
+
+    </form><br/>
+    <a href="{% url 'aboutPasswordGenerator'%} " class="text-left">About <i>Django 3 - Password Generator</i></a>
+</div>
+</body>
+</html>
